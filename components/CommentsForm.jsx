@@ -47,11 +47,11 @@ const CommentsForm = ({ slug }) => {
     };
 
     if (storeData) {
-      localStorage.setItem('name', name);
-      localStorage.setItem('email', email);
+      window.localStorage.setItem('name', name);
+      window.localStorage.setItem('email', email);
     } else {
-      localStorage.removeItem('name');
-      localStorage.removeItem('email');
+      window.localStorage.removeItem('name');
+      window.localStorage.removeItem('email');
     }
 
     submitComment(commentObj)
@@ -117,8 +117,8 @@ const CommentsForm = ({ slug }) => {
       </div>
       {error && <p className="text-xs text-red-500">Todos os campos são obrigatórios</p>}
       <div className="mt-8">
-        <button type="button" onClick={handlePostSubmission} className="transition duration-500 ease hover:bg-indigo-900 inline-block bg-pink-900 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">Post Comment</button>
-        {showSuccessMessage && <span className="text-xl float-right font-semibold mt-3 text-green-500">Comment submitted for review</span>}
+        <button type="button" onClick={handlePostSubmission} className="transition duration-500 ease hover:bg-pink-800 inline-block bg-pink-900 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">Postar Comentário</button>
+        {showSuccessMessage && <span className="text-xl float-right font-semibold mt-3 text-green-500">Comentário enviado para revisão</span>}
       </div>
     </div>
     </div>
