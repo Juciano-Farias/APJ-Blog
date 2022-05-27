@@ -22,6 +22,11 @@ const Header = () => {
                         </span>
                     </Link>
                 </div>
+                <div className='hiden md:float-left md:contents'>
+                    <Link href='/about'><span className='md:float-right mt-2 align-middle text-pink-900 ml-4 fonts-semibold cursor-pointer'>Sobre nós</span></Link>
+                    <Link href='/events'><span className='md:float-right mt-2 align-middle text-pink-900 ml-4 fonts-semibold cursor-pointer'>Eventos</span></Link>
+                    <Link href='/members'><span className='md:float-right mt-2 align-middle text-pink-900 ml-4 fonts-semibold cursor-pointer'>Membros</span></Link>
+                </div>
                 {/* <div className='hiden md:float-left md:contents'>
                     {categories.map((category) => (
                         <Link key={category.slug} href={`/category/${category.slug}`}>
